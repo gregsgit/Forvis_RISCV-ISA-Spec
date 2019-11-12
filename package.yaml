@@ -1,0 +1,39 @@
+name:                Forvis
+version:             0.1.0.0
+github:              "https://github.com/rsnikhil/Forvis_RISCV-ISA-Spec"
+license:             MIT
+author:              "Rishiyur S. Nikhil"
+maintainer:          "example@example.com"
+copyright:           "2018-2019 Rishiyur S. Nikhil, Bluespec, Inc. Portions Copyright (c) Niraj Nayan Sharma, Bluespec, Inc."
+
+extra-source-files:
+- LICENSE
+- Makefile
+- NEWS.txt
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+description:         Please see the README on GitHub at <https://github.com/rsnikhil/Forvis_RISCV-ISA-Spec#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- bytestring
+- elf
+
+# library:
+#  source-dirs: src
+
+executables:
+  forvis_exe:
+    main:                Main.hs
+    source-dirs:         src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -dynamic
+    - -O2
+    - -cpp
+    - -outputdir tmp_haskell
